@@ -1,0 +1,290 @@
+.hero {
+    display: grid;
+    grid-template-columns: 1.6fr 1fr;
+    gap: 20px;
+
+    &__info {
+        padding: 80px 20px 20px 20px;
+        background: var(--dark-10);
+        border-radius: 20px;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden; // ВАЖНО: добавляем здесь
+
+        &_box {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            padding: 0 0 0 30px;
+            gap: 20px;
+
+            &_h4 {
+                font-family: var(--font-family);
+                font-weight: 600;
+                font-size: 78px;
+                line-height: 120%;
+                text-transform: uppercase;
+                color: var(--orange-95);
+                flex: 1;
+                min-width: 0;
+                word-break: break-word;
+            }
+
+            &_btn {
+                flex-shrink: 0;
+            }
+        }
+
+        &_description {
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+
+            &_text {
+                margin-top: 30px;
+                margin-bottom: 120px;
+                padding-left: 30px;
+                padding-right: 10px; // Добавляем правый отступ
+                max-width: 927px;
+                font-family: var(--font-family);
+                font-weight: 400;
+                font-size: 18px;
+                line-height: 150%;
+                color: var(--grey-40);
+            }
+
+            &_marquee {
+                // width: 100%; // Удаляем чтобы работал auto + negative margin
+                margin: 0 -20px; // Растягиваем на всю ширину (компенсируем padding)
+                // max-width: calc(100% + 40px); // Не нужно при width: auto
+                overflow: hidden;
+            }
+        }
+    }
+
+    &__card {
+        background: var(--dark-10);
+        border-radius: 14px;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 400px;
+    }
+
+    // Планшеты средние
+    @media (max-width: 1200px) {
+        grid-template-columns: 1fr 0.8fr;
+        gap: 16px;
+
+        &__info {
+            padding: 60px 20px 20px 20px;
+
+            &_box {
+                padding-left: 20px;
+
+                &_h4 {
+                    font-size: 52px;
+                }
+            }
+
+            &_description {
+                &_text {
+                    font-size: 16px;
+                    padding-left: 20px;
+                    margin-bottom: 50px;
+                }
+
+                &_marquee {
+                    margin: 0 -20px;
+                    // max-width: calc(100% + 40px);
+                }
+            }
+        }
+
+        &__card {
+            min-height: 350px;
+        }
+    }
+
+    // Планшеты маленькие - переход на одну колонку
+    @media (max-width: 992px) {
+        grid-template-columns: 1fr;
+
+        &__info {
+            padding: 50px 20px;
+
+            &_box {
+                padding-left: 15px;
+
+                &_h4 {
+                    font-size: 48px;
+                }
+            }
+
+            &_description {
+                &_text {
+                    padding-left: 15px;
+                    margin-bottom: 40px;
+                }
+
+                &_marquee {
+                    margin: 0 -20px;
+                    // max-width: calc(100% + 40px);
+                }
+            }
+        }
+
+        &__card {
+            min-height: 400px;
+        }
+    }
+
+    // Мобильные большие
+    @media (max-width: 768px) {
+        gap: 12px;
+
+        &__info {
+            padding: 40px 16px;
+            border-radius: 16px;
+
+            &_box {
+                flex-direction: column;
+                gap: 20px;
+                padding-left: 10px;
+
+                &_h4 {
+                    font-size: 36px;
+                    line-height: 110%;
+                }
+
+                &_btn {
+                    align-self: flex-start;
+                }
+            }
+
+            &_description {
+                &_text {
+                    font-size: 15px;
+                    margin-top: 20px;
+                    margin-bottom: 35px;
+                    padding-left: 10px;
+                }
+
+                &_marquee {
+                    margin: 0 -16px;
+                    // max-width: calc(100% + 32px);
+                }
+            }
+        }
+
+        &__card {
+            min-height: 300px;
+            border-radius: 12px;
+        }
+    }
+
+    // Мобильные средние
+    @media (max-width: 576px) {
+        &__info {
+            padding: 35px 14px;
+
+            &_box {
+                padding-left: 8px;
+                gap: 16px;
+
+                &_h4 {
+                    font-size: 30px;
+                }
+            }
+
+            &_description {
+                &_text {
+                    font-size: 14px;
+                    margin-bottom: 30px;
+                    padding-left: 8px;
+                }
+
+                &_marquee {
+                    margin: 0 -14px;
+                    // max-width: calc(100% + 28px);
+                }
+            }
+        }
+
+        &__card {
+            min-height: 280px;
+        }
+    }
+
+    // Мобильные маленькие
+    @media (max-width: 480px) {
+        gap: 10px;
+
+        &__info {
+            padding: 30px 12px;
+            border-radius: 14px;
+
+            &_box {
+                padding-left: 6px;
+                gap: 14px;
+
+                &_h4 {
+                    font-size: 26px;
+                    line-height: 105%;
+                }
+            }
+
+            &_description {
+                &_text {
+                    font-size: 13px;
+                    margin-top: 16px;
+                    margin-bottom: 25px;
+                    padding-left: 6px;
+                    line-height: 140%;
+                }
+
+                &_marquee {
+                    margin: 0 -12px;
+                    // max-width: calc(100% + 24px);
+                }
+            }
+        }
+
+        &__card {
+            min-height: 250px;
+        }
+    }
+
+    // Мобильные очень маленькие
+    @media (max-width: 375px) {
+        &__info {
+            padding: 25px 10px;
+
+            &_box {
+                padding-left: 5px;
+
+                &_h4 {
+                    font-size: 24px;
+                }
+            }
+
+            &_description {
+                &_text {
+                    font-size: 12px;
+                    margin-bottom: 20px;
+                    padding-left: 5px;
+                }
+
+                &_marquee {
+                    margin: 0 -10px;
+                    // max-width: calc(100% + 20px);
+                }
+            }
+        }
+
+        &__card {
+            min-height: 220px;
+        }
+    }
+}

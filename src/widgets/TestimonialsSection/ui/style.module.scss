@@ -1,0 +1,20 @@
+.section {
+    margin: 5em 0;
+
+    &__content {
+        border-radius: 20px;
+        border: 3px solid var(--dark-12);
+        padding: 10px;
+        color: var(--dark-10);
+
+    }
+}
+
+
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 10px;
+    margin-top: 10px;
+}

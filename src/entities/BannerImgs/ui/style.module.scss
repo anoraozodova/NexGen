@@ -1,0 +1,112 @@
+.card {
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden;
+    background: var(--dark-12);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    &:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    &__images {
+        position: relative;
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-start;
+
+        & a {
+            display: block;
+            position: absolute;
+            transition: 0.3s ease, transform 0.3s ease;
+            top: -15px;
+            right: -25px;
+            width: 200px;
+            height: 200px;
+            background: #000;
+            padding: 40px 40px 30px 30px;
+            border-radius: 50% 0 50% 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transform: scale(1.1);
+
+            & img {
+                width: 800%;
+            }
+        }
+
+        &_img {
+            border-radius: 14px;
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            display: block;
+        }
+    }
+
+    &__descr {
+        padding: 30px;
+        background: var(--dark-12);
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+
+        & p {
+            font-family: var(--font-family);
+            font-weight: 500;
+            font-size: 24px;
+            line-height: 150%;
+            text-transform: uppercase;
+            color: var(--orange-95);
+        }
+
+        & span {
+            font-family: var(--font-family);
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 150%;
+            color: var(--grey-70);
+        }
+    }
+
+    /* ========================= */
+    /* 🌐 Адаптация карточки     */
+    /* ========================= */
+
+    @media (max-width: 1200px) {
+        &__descr {
+            padding: 22px;
+
+            & p {
+                font-size: 22px;
+            }
+
+            & span {
+                font-size: 16px;
+            }
+        }
+
+        &__images {
+
+
+            a {
+                width: 100px;
+                height: 100px;
+                // // top: 0;
+                // right: 0;
+                padding: 20px 20px 15px 15px;
+
+                & img {
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 992px) {
+        display: none;
+    }
+}

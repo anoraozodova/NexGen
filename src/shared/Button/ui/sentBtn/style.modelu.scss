@@ -1,0 +1,23 @@
+.button {
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: clamp(1rem, 1.125vw, 1.125rem);
+    line-height: 150%;
+    text-transform: uppercase;
+    text-align: center;
+    color: var(--dark-06);
+    border-radius: 0.75em;
+    padding: 1.125em 1.5em;
+    background: var(--orange-60);
+    // margin-bottom: 20px;
+
+    &:hover {
+        background: var(--orange-70);
+        transform: translateY(-0.125em);
+        box-shadow: 0 0.5em 1.5em rgba(255, 140, 66, 0.3);
+    }
+
+    &:active {
+        transform: translateY(0);
+    }
+}

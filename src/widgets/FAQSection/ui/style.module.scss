@@ -1,0 +1,50 @@
+.section {
+    padding: clamp(3em, 6vw, 5em) 0;
+
+    &__header {
+        margin-bottom: 20px;
+    }
+
+    &__wrapper {
+        display: grid;
+        grid-template-columns: 799fr 561fr;
+        gap: 10px;
+        align-items: start;
+
+        /* На планшетах - одна колонка */
+        @media (max-width: 75em) {
+            /* 1200px */
+            grid-template-columns: 1fr;
+            gap: 2.5em;
+        }
+
+        /* На мобилках */
+        @media (max-width: 48em) {
+            /* 768px */
+            gap: 2em;
+        }
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        min-width: 0;
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: clamp(0.75em, 1.5vw, 1em);
+    }
+
+    &__aside {
+        position: sticky;
+        top: 2em;
+        height: fit-content;
+        min-width: 0;
+
+        @media (max-width: 75em) {
+            position: static;
+        }
+    }
+}

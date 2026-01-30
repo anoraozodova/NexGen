@@ -1,0 +1,13 @@
+.badge {
+    display: inline-block;
+    padding: 0.25em 0.625em;
+    background: var(--dark-20);
+    border: 0.0625em solid var(--dark-25);
+    border-radius: 0.25em;
+    font-family: var(--second-family);
+    font-size: 0.75em;
+    font-weight: 500;
+    color: var(--grey-70);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}

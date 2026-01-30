@@ -1,0 +1,18 @@
+.iconButton {
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease;
+    padding: 0.25em;
+    border: 1px solid var(--dark-20);
+    border-radius: 100px;
+    background: var(--dark-12);
+
+    &:hover {
+        background-color: var(--dark-15);
+        border-color: var(--orange-60);
+
+        svg path {
+            fill: var(--orange-60);
+        }
+    }
+}

@@ -1,0 +1,1 @@
+export { NewsletterInput } from '../NewsletterInput/ui/NewsletterInput';

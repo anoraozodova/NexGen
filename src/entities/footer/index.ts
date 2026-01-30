@@ -1,0 +1,1 @@
+export type { SocialLink, FooterLink, FooterSection } from './model/types';
