@@ -12,7 +12,30 @@ export const SECTIONS_CONFIG = {
         buttonText: 'View All',
     },
     successStories: {
-        title: 'Success Stories',
+        title: 'PROJECTS SHOWCASE',
         buttonText: 'View All',
     },
+    developers:{
+        title:'Meet the brilliant minds behind NexGen',
+        buttonText:'ALL Members',
+    },
+    achievements:{
+        title:'Our Achievements'
+    },
+    awards:{
+        title:'Awards & Recognitions'
+    },
+    careers:{
+        title:'Join Our Team at NexGen'
+    },
+    howToApply: {
+        title: 'HOW TO APPLY',
+        buttonText: 'View All'
+    },
+    blog: {
+        title: 'LATEST BLOG POSTS',
+        buttonText: 'View All'
+    }
+
+
 } as const;

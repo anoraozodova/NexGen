@@ -1,0 +1,32 @@
+.section {
+    margin-top: clamp(4em, 8vw, 7.5em);
+}
+
+.section__content {
+    border: 2px solid var(--dark-12);
+    border-radius: 20px;
+    padding: clamp(0.625rem, 1vw, 1.25rem);
+    background: transparent;
+}
+
+.section__header {
+    margin-bottom: clamp(1.25rem, 3vw, 2.5rem);
+}
+
+.grid {
+    display: flex;
+    flex-direction: column;
+    gap: clamp(0.625rem, 1vw, 1.25rem);
+}
+
+.row {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: clamp(0.625rem, 1vw, 1.25rem);
+}
+
+@media (max-width: 992px) {
+    .row {
+        grid-template-columns: 1fr;
+    }
+}

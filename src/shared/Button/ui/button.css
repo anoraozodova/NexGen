@@ -74,7 +74,7 @@ button.learn-more .button-text {
     text-align: center;
     text-transform: uppercase;
     font-family: var(--font-family);
-    font-size: clamp(0.75rem, 2vw, 1rem);
+    font-size: clamp(0.65rem, 2vw, 1rem);
     white-space: nowrap;
 }
 

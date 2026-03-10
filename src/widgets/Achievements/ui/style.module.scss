@@ -1,0 +1,21 @@
+
+.section {
+    margin-top: clamp(4em, 8vw, 7.5em);
+}
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap:  clamp(0.625rem, 1vw, 1.25rem);
+    width: 100%;  
+      margin-top:  clamp(0.625rem, 1vw, 1.25rem);
+
+
+  
+    @media (max-width: 1024px) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (max-width: 768px) {
+        grid-template-columns: 1fr;
+    }
+}

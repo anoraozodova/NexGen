@@ -3,6 +3,7 @@ import { services } from "../../../entities/Services/index";
 import { servicesDetailedData } from "../model/data";
 import styles from "./style.module.scss";
 import arrow from "../../../assets/icons/arrow.svg";
+import { ServiceCard } from "../../../entities/Services/ui/ServiceCard/ServiceCard";
 
 const ServicesDetailed: React.FC = () => {
     return (
@@ -18,29 +19,8 @@ const ServicesDetailed: React.FC = () => {
                             return (
                                 <div key={item.id} className={styles.card}>
 
-                                    {/* Левая колонка - Инфо */}
-                                    <div className={styles.info}>
-                                        <div className={styles.info__header}>
-                                            <div className={styles.info__title_box}>
-                                                <div className={styles.info__icon}>
-                                                    <item.icon />
-                                                </div>
-                                                <h3 className={styles.info__title}>{item.title}</h3>
-                                            </div>
-                                            <div className={styles.info__book}>
-                                                <span className={styles.info__book_text}>Book A Call</span>
-                                                <div className={styles.info__book_icon}>
-                                                    <img src={arrow} alt="Arrow" width="18" height="18" />
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <p className={styles.info__description}>{item.description}</p>
-
-                                        <div className={styles.info__price}>
-                                            Starts from {item.price}
-                                        </div>
-                                    </div>
+                                    {/* Левая колонка - Инфо (Переиспользуем ServiceCard) */}
+                                    <ServiceCard item={item} className={styles.info_card} />
 
                                     {/* Правая колонка - Проекты */}
                                     <div className={styles.projects}>

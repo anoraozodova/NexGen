@@ -1,0 +1,114 @@
+.card {
+    background: var(--dark-10);
+    border-radius: 14px;
+    border: 1px solid transparent;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    cursor: default;
+
+    &:hover {
+        border-color: var(--orange-60);
+        transform: translateY(-4px);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    }
+}
+
+.top {
+    padding: clamp(0.625rem, 1.5vw, 1.875rem);
+    background-color: transparent;
+}
+
+.middle {
+    background: var(--dark-12);
+    border-top: 2px solid var(--dark-15);
+    border-bottom: 2px solid var(--dark-15);
+    padding: clamp(1.875rem, 3vw, 2.5rem) clamp(1.25rem, 1.5vw, 1.5rem);
+    display: flex;
+    align-items: center;
+}
+
+.bottom {
+    padding: clamp(1.25rem, 2vw, 1.875rem);
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.step {
+    font-family: var(--second-family);
+    font-weight: 400;
+    font-size: clamp(0.875rem, 0.8vw, 1.25rem);
+    line-height: 150%;
+    color: var(--grey-50);
+}
+
+.title {
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: clamp(1.125rem, 1.1vw, 1.5rem);
+    line-height: 150%;
+    text-transform: uppercase;
+    color: var(--orange-95);
+}
+
+.description {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: clamp(14px, 1.1vw, 18px);
+    line-height: 150%;
+    color: var(--grey-70);
+}
+
+.btn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    width: fit-content;
+}
+
+.iconCircle {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: 1px solid var(--dark-20);
+    background: var(--dark-12);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.icon {
+    width: 14px;
+    height: 14px;
+    filter: invert(83%) sepia(21%) saturate(541%) hue-rotate(328deg) brightness(96%) contrast(88%); // Approximate color for grey-70
+}
+
+.btnText {
+    font-family: var(--second-family);
+    font-weight: 500;
+    font-size: 14px;
+    text-transform: uppercase;
+    color: var(--grey-70);
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    .iconCircle {
+        background: var(--dark-15);
+        border-color: var(--orange-60);
+    }
+    .btnText {
+        color: var(--orange-95);
+    }
+    .icon {
+        filter: invert(93%) sepia(13%) saturate(1412%) hue-rotate(320deg) brightness(101%) contrast(96%); // Approximate color for orange-95
+    }
+}

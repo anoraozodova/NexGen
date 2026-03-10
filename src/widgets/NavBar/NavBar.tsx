@@ -1,11 +1,14 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import styles from "./style.module.scss";
 import logo from "../../assets/icons/logo.svg";
 import { Menu, X } from "lucide-react";
 
 const NavBar: React.FC = () => {
     const [open, setOpen] = useState(false);
+    const location = useLocation();
+
+    const isActive = (path: string) => location.pathname === path;
 
     return (
         <nav className={styles.nav}>
@@ -24,12 +27,54 @@ const NavBar: React.FC = () => {
                     </button>
 
                     <ul className={`${styles.nav__list} ${open ? styles.active : ""}`}>
-                        <li><Link to="/">Home</Link></li>
-                        <li><Link to="/services">Services</Link></li>
-                        <li><a href="#projects">Projects</a></li>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#careers">Careers</a></li>
-                        <li><a href="#blog">Blog</a></li>
+                        <li>
+                            <Link
+                                to="/"
+                                className={isActive('/') ? styles.activeLink : ''}
+                            >
+                                Home
+                            </Link>
+                        </li>
+                        <li>
+                            <Link
+                                to="/services"
+                                className={isActive('/services') ? styles.activeLink : ''}
+                            >
+                                Services
+                            </Link>
+                        </li>
+                        <li>
+                            <Link
+                                to="/projects"
+                                className={isActive('/projects') ? styles.activeLink : ''}
+                            >
+                                Projects
+                            </Link>
+                        </li>
+                        <li>
+                            <Link
+                                to="/about"
+                                className={isActive('/about') ? styles.activeLink : ''}
+                            >
+                                About
+                            </Link>
+                        </li>
+                        <li>
+                            <Link
+                                to="/careers"
+                                className={isActive('/careers') ? styles.activeLink : ''}
+                            >
+                                careers
+                            </Link>
+                        </li>
+                        <li>
+                            <Link
+                                to="/blog"
+                                className={isActive('/blog') ? styles.activeLink : ''}
+                            >
+                                Blog
+                            </Link>
+                        </li>
                         <li><a href="#contact" className={styles.nav__contact}>Contact Us</a></li>
                     </ul>
                 </div>

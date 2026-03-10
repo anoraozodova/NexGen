@@ -9,7 +9,7 @@
         border-radius: 20px;
         display: flex;
         flex-direction: column;
-        overflow: hidden; // ВАЖНО: добавляем здесь
+        overflow: hidden; 
 
         &_box {
             display: flex;
@@ -21,7 +21,7 @@
             &_h4 {
                 font-family: var(--font-family);
                 font-weight: 600;
-                font-size: 78px;
+                font-size: clamp(1.75rem, 6vw, 4.875rem);
                 line-height: 120%;
                 text-transform: uppercase;
                 color: var(--orange-95);
@@ -41,8 +41,8 @@
             flex: 1;
 
             &_text {
-                margin-top: 30px;
-                margin-bottom: 120px;
+                margin-top: 20px;
+                margin-bottom: clamp(1.9375em, 6vw, 5.625em);
                 padding-left: 30px;
                 padding-right: 10px; // Добавляем правый отступ
                 max-width: 927px;
@@ -55,11 +55,24 @@
 
             &_marquee {
                 // width: 100%; // Удаляем чтобы работал auto + negative margin
-                margin: 0 -20px; // Растягиваем на всю ширину (компенсируем padding)
+                margin: 0 20px; // Растягиваем на всю ширину (компенсируем padding)
                 // max-width: calc(100% + 40px); // Не нужно при width: auto
                 overflow: hidden;
             }
         }
+    }
+
+    &__project_title_box {
+        display: flex;
+        flex-direction: column;
+        padding: 0 0 0 30px;
+    }
+
+    &__project_row {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        flex-wrap: wrap;
     }
 
     &__card {
@@ -87,18 +100,24 @@
                     font-size: 52px;
                 }
             }
+        }
 
-            &_description {
-                &_text {
-                    font-size: 16px;
-                    padding-left: 20px;
-                    margin-bottom: 50px;
-                }
+        &__project_title_box {
+            padding-left: 20px;
+        }
 
-                &_marquee {
-                    margin: 0 -20px;
-                    // max-width: calc(100% + 40px);
-                }
+    
+
+        &__info_description {
+            &_text {
+                font-size: 16px;
+                padding-left: 20px;
+                margin-bottom: 50px;
+            }
+
+            &_marquee {
+                margin: 0 -20px;
+                // max-width: calc(100% + 40px);
             }
         }
 
@@ -117,21 +136,27 @@
             &_box {
                 padding-left: 15px;
 
-                &_h4 {
-                    font-size: 48px;
-                }
+            
+            }
+        }
+
+        &__project_title_box {
+            padding-left: 15px;
+        }
+
+        &__project_row .hero__info_box_h4 {
+            font-size: 48px;
+        }
+
+        &__info_description {
+            &_text {
+                padding-left: 15px;
+                margin-bottom: 40px;
             }
 
-            &_description {
-                &_text {
-                    padding-left: 15px;
-                    margin-bottom: 40px;
-                }
-
-                &_marquee {
-                    margin: 0 -20px;
-                    // max-width: calc(100% + 40px);
-                }
+            &_marquee {
+                margin: 0 -20px;
+                // max-width: calc(100% + 40px);
             }
         }
 
@@ -153,28 +178,36 @@
                 gap: 20px;
                 padding-left: 10px;
 
-                &_h4 {
-                    font-size: 36px;
-                    line-height: 110%;
-                }
+                // &_h4 {
+                //     font-size: 36px;
+                //     line-height: 110%;
+                // }
 
                 &_btn {
                     align-self: flex-start;
                 }
             }
+        }
 
-            &_description {
-                &_text {
-                    font-size: 15px;
-                    margin-top: 20px;
-                    margin-bottom: 35px;
-                    padding-left: 10px;
-                }
+        &__project_title_box {
+            padding-left: 10px;
+        }
 
-                &_marquee {
-                    margin: 0 -16px;
-                    // max-width: calc(100% + 32px);
-                }
+        &__project_row .hero__info_box_h4 {
+            font-size: 36px;
+        }
+
+        &__info_description {
+            &_text {
+                font-size: 15px;
+                margin-top: 20px;
+                margin-bottom: 35px;
+                padding-left: 10px;
+            }
+
+            &_marquee {
+                margin: 0 -16px;
+                // max-width: calc(100% + 32px);
             }
         }
 
@@ -193,98 +226,18 @@
                 padding-left: 8px;
                 gap: 16px;
 
-                &_h4 {
-                    font-size: 30px;
-                }
-            }
-
-            &_description {
-                &_text {
-                    font-size: 14px;
-                    margin-bottom: 30px;
-                    padding-left: 8px;
-                }
-
-                &_marquee {
-                    margin: 0 -14px;
-                    // max-width: calc(100% + 28px);
-                }
+                // &_h4 {
+                //     font-size: 30px;
+                // }
             }
         }
 
-        &__card {
-            min-height: 280px;
-        }
-    }
-
-    // Мобильные маленькие
-    @media (max-width: 480px) {
-        gap: 10px;
-
-        &__info {
-            padding: 30px 12px;
-            border-radius: 14px;
-
-            &_box {
-                padding-left: 6px;
-                gap: 14px;
-
-                &_h4 {
-                    font-size: 26px;
-                    line-height: 105%;
-                }
-            }
-
-            &_description {
-                &_text {
-                    font-size: 13px;
-                    margin-top: 16px;
-                    margin-bottom: 25px;
-                    padding-left: 6px;
-                    line-height: 140%;
-                }
-
-                &_marquee {
-                    margin: 0 -12px;
-                    // max-width: calc(100% + 24px);
-                }
-            }
+        &__project_title_box {
+            padding-left: 8px;
         }
 
-        &__card {
-            min-height: 250px;
-        }
-    }
-
-    // Мобильные очень маленькие
-    @media (max-width: 375px) {
-        &__info {
-            padding: 25px 10px;
-
-            &_box {
-                padding-left: 5px;
-
-                &_h4 {
-                    font-size: 24px;
-                }
-            }
-
-            &_description {
-                &_text {
-                    font-size: 12px;
-                    margin-bottom: 20px;
-                    padding-left: 5px;
-                }
-
-                &_marquee {
-                    margin: 0 -10px;
-                    // max-width: calc(100% + 20px);
-                }
-            }
-        }
-
-        &__card {
-            min-height: 220px;
-        }
+        // &__project_row .hero__info_box_h4 {
+        //     font-size: 30px;
+        // }
     }
 }

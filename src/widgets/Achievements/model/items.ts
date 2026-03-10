@@ -1,0 +1,33 @@
+export interface Achievement {
+    id: number;
+    date: string;
+    title: string;
+    description: string;
+}
+
+export const achievements: Achievement[] = [
+    {
+        id: 1,
+        date: "September 2023",
+        title: "GLOBAL RECOGNITION FOR INNOVATION",
+        description: "In 2023, our digital agency gained global acclaim for innovative solutions, setting new standards in the ever-evolving digital landscape."
+    },
+    {
+        id: 2,
+        date: "March 2019",
+        title: "INDUSTRY LEADERSHIP ACKNOWLEDGED",
+        description: "Recognized as an industry leader in 2019, our agency received prestigious awards, affirming our commitment to excellence and client satisfaction."
+    },
+    {
+        id: 3,
+        date: "August 2015",
+        title: "EXPANSION INTO INTERNATIONAL MARKETS",
+        description: "Expanding horizons in 2015, our agency successfully entered international markets, establishing a global presence and serving clients on a broader scale."
+    },
+    {
+        id: 4,
+        date: "January 2010",
+        title: "PIONEERING THE DIGITAL FRONTIER",
+        description: "In 2010, our agency was born, pioneering the digital frontier and establishing core principles that have guided us through a decade of innovation."
+    }
+];

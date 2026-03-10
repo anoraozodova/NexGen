@@ -11,7 +11,7 @@ interface CardHomeProps {
 
 const CardHome: React.FC<CardHomeProps> = ({ img, isServices }) => {
     return (
-        <div className={styles.card}>
+        <div className={`${styles.card} ${isServices ? styles.card_full : ''}`}>
             <div className={styles.card__images}>
                 <img className={styles.card__images_img} src={img} alt="" />
                 {!isServices && (

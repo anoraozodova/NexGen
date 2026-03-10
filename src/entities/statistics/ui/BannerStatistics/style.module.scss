@@ -1,0 +1,103 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    height: 100%;
+}
+
+.statsGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: clamp(0.625em, 2.5vw, 1.25em);
+    flex: 1;
+}
+
+.statCard {
+    border-radius: 14px;
+    padding: clamp(1.25em, 3vw, 1.875em);
+    background: var(--dark-10);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.statTitle {
+    font-family: var(--second-family);
+    font-weight: 500;
+    font-size: clamp(0.875em, 1vw, 1.125em);
+    line-height: 150%;
+    text-transform: uppercase;
+    text-align: center;
+    color: var(--grey-70);
+    margin-bottom: 0.5em;
+}
+
+.statValue {
+    font-family: var(--font-family);
+    font-weight: 600;
+    line-height: 150%;
+    font-size: clamp(2.5em, 5vw, 3.75em);
+    text-transform: uppercase;
+    text-align: center;
+    color: var(--orange-70);
+    transition: transform 0.3s ease;
+}
+
+.knowMoreWrapper {
+    background: var(--dark-10);
+    border-radius: 14px;
+    padding: clamp(1.25em, 3vw, 1.875em);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    gap: 15px;
+
+    &:hover {
+        transform: translateY(-4px);
+        background: var(--dark-12);
+        
+        .knowMoreIcon {
+            // transform: translateX(5px);
+        }
+    }
+
+    &:active {
+        transform: translateY(-2px);
+    }
+}
+
+.knowMoreIcon {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: var(--dark-15);
+    border: 1px solid var(--dark-20);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--grey-70);
+    transition: transform 0.3s ease;
+    flex-shrink: 0;
+}
+
+.knowMoreText {
+    font-family: var(--second-family);
+    font-weight: 500;
+    font-size: clamp(0.875em, 1vw, 1.125em);
+    line-height: 150%;
+    text-transform: uppercase;
+    color: var(--grey-70);
+}
+
+@media (max-width: 768px) {
+    // .statsGrid {
+    //     gap: 10px;
+    // }
+    
+    // .statCard {
+    //     padding: 20px;
+    // }
+}

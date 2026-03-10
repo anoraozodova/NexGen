@@ -32,9 +32,20 @@
             font-size: 18px;
             line-height: 150%;
             text-transform: uppercase;
+            text-align: center;
             color: var(--grey-50);
 
             &:hover {
+                color: var(--orange-80);
+            }
+
+            &.activeLink {
+                font-family: var(--second-family);
+                font-weight: 500;
+                font-size: 18px;
+                line-height: 150%;
+                text-transform: uppercase;
+                text-align: center;
                 color: var(--orange-80);
             }
         }
