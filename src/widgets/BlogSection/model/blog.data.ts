@@ -18,7 +18,7 @@ export const blogPosts: BlogPost[] = [
         category: "Marketing",
         date: "September 15, 2023",
         description: "Content marketing is not just about creating content; it's about creating value. In this blog post, we explore how a strategic content marketing approach can drive business growth.",
-        image: "/images/blog_1.jpg",
+        image: "/image/card_1.jpg",
         author: {
             name: "Sarah Thompson",
             avatar: "/avatars/CEO_ava.svg"
@@ -30,7 +30,7 @@ export const blogPosts: BlogPost[] = [
         category: "Design",
         date: "October 20, 2023",
         description: "Web design is more than just aesthetics; it's about creating a seamless user experience. Learn the key principles of web design that every designer should know.",
-        image: "/images/blog_2.jpg",
+        image: "/image/card_2.jpg",
         author: {
             name: "Wade Warren",
             avatar: "/avatars/Art_ava.svg"
@@ -42,7 +42,7 @@ export const blogPosts: BlogPost[] = [
         category: "Development",
         date: "November 5, 2023",
         description: "As technology continues to evolve, so does the landscape of web development. Discover the latest trends and technologies shaping the future of web development.",
-        image: "/images/blog_3.jpg",
+        image: "/image/card_3.jpg",
         author: {
             name: "Lisa Williams",
             avatar: "/avatars/CEO_ava.svg"
